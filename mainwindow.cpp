@@ -33,3 +33,4 @@ void MainWindow::on_lastPage_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
+
