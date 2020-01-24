@@ -12,18 +12,21 @@ class ReservationRecord
         string CurrentChoice();
 
         string getCustomerName();
-        int getRoomType();
+        int getRoomSize();
+        int getRoomView();
         int getNumNights();
         bool getParkingNeeded();
 
         void setCustomerName(string name);
-        void setRoomType(int roomType);
+        void setRoomSize(int roomSize);
+        void setRoomView(int roomView);
         void setNumNights(int numNights);
         void setParkingNeeded(bool needed);
 
     private:
         string customerName;
-        int roomType;
+        int roomSize;
+        int roomView;
         int numNights;
         bool parkingNeeded;
 };

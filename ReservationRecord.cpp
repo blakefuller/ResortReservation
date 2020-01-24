@@ -9,7 +9,7 @@ ReservationRecord::ReservationRecord()
 
 }
 
-// get room type/vehicle park needed and multiply by night to stay
+// get room Size/vehicle park needed and multiply by night to stay
 double ReservationRecord :: CalculateCost()
 {
     double totalCost = 0;
@@ -20,7 +20,7 @@ double ReservationRecord :: CalculateCost()
         totalCost += multipleNights * 12.75;
     }
 
-    switch(getRoomType())
+    switch(getRoomSize())
     {
         case 1:
             totalCost += multipleNights * 284;
@@ -43,7 +43,7 @@ string ReservationRecord :: CurrentChoice()
 {
     stringstream ss;
     ss << "Name: " << getCustomerName();
-    ss << "\nRoom Type: " << getRoomType();
+    ss << "\nRoom Size: " << getRoomSize();
     ss << "\nNumber of Nights: " << getNumNights();
 
     string parking;
@@ -64,10 +64,15 @@ string ReservationRecord :: getCustomerName()
     return customerName;
 }
 
-// Gets the room type the user is sleeping in (4 different types)
-int ReservationRecord :: getRoomType()
+// Gets the room Size the user is sleeping in (4 different Sizes)
+int ReservationRecord :: getRoomSize()
 {
-    return roomType;
+    return roomSize;
+}
+
+int ReservationRecord :: getRoomView()
+{
+    return roomView;
 }
 
 // Get the number of nights the user is going to stay in
@@ -87,10 +92,15 @@ void ReservationRecord :: setCustomerName(string name)
 {
     customerName = name;
 }
-// sets the room type with passed value
-void ReservationRecord :: setRoomType(int room)
+// sets the room Size with passed value
+void ReservationRecord :: setRoomSize(int room)
 {
-    roomType = room;
+    roomSize = room;
+}
+
+void ReservationRecord :: setRoomView(int room)
+{
+    roomView = room;
 }
 
 // sets the number of nights with passed value
