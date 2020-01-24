@@ -53,6 +53,4 @@ void MainWindow::on_roomView_currentIndexChanged(int index)
 void MainWindow::on_roomSize_currentIndexChanged(int index)
 {
     Record.setRoomSize(index);
-    QString thing = QString::number(Record.getRoomSize());
-    ui->totCost->setText(thing);
 }
