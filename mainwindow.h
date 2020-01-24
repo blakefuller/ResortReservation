@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <ReservationRecord.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,7 +25,10 @@ private slots:
 
     void on_lastPage_2_clicked();
 
+    void on_nameInput_textChanged();
+
 private:
     Ui::MainWindow *ui;
+    ReservationRecord Record;
 };
 #endif // MAINWINDOW_H

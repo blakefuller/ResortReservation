@@ -34,3 +34,9 @@ void MainWindow::on_lastPage_2_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+
+void MainWindow::on_nameInput_textChanged()
+{
+    QString name = ui->nameInput->toPlainText();
+    Record.setCustomerName(name.toUtf8().constData());
+}
