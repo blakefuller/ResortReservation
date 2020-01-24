@@ -18,3 +18,18 @@ void MainWindow::on_nextPage_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
+
+void MainWindow::on_nextPage_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_lastPage_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_lastPage_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}

@@ -18,6 +18,12 @@ public:
 private slots:
     void on_nextPage_clicked();
 
+    void on_nextPage_2_clicked();
+
+    void on_lastPage_clicked();
+
+    void on_lastPage_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
