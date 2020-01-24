@@ -56,7 +56,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Room Type:</string>
+         <string>Room Size:</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_6">
@@ -75,7 +75,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Room Choice:</string>
+         <string>Room View:</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_7">
@@ -192,37 +192,6 @@
        <widget class="QComboBox" name="roomSize">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>130</y>
-          <width>131</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Lucida Console</family>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <item>
-         <property name="text">
-          <string>&lt;Choose One&gt;</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Standard</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Atrium</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QComboBox" name="roomView">
-        <property name="geometry">
-         <rect>
           <x>210</x>
           <y>130</y>
           <width>131</width>
@@ -251,6 +220,37 @@
          </property>
         </item>
        </widget>
+       <widget class="QComboBox" name="roomView">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>130</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>&lt;Choose One&gt;</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Standard</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Atrium</string>
+         </property>
+        </item>
+       </widget>
        <widget class="QDateEdit" name="resDate">
         <property name="geometry">
          <rect>
@@ -265,6 +265,19 @@
           <family>Lucida Console</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="dateTime">
+         <datetime>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>0</second>
+          <year>2020</year>
+          <month>1</month>
+          <day>1</day>
+         </datetime>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
         </property>
        </widget>
        <widget class="QSpinBox" name="lenStay">
@@ -298,6 +311,9 @@
           <pointsize>10</pointsize>
          </font>
         </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
        </widget>
        <widget class="QSpinBox" name="numChild">
         <property name="geometry">
@@ -313,6 +329,12 @@
           <family>Lucida Console</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
         </property>
        </widget>
        <widget class="QCheckBox" name="parking">
@@ -350,7 +372,7 @@
          </font>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string>$0.00</string>
         </property>
        </widget>
        <widget class="QPushButton" name="nextPage">
@@ -463,7 +485,7 @@
      <x>0</x>
      <y>0</y>
      <width>768</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
