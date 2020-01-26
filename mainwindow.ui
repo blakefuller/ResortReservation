@@ -25,7 +25,7 @@
         <property name="geometry">
          <rect>
           <x>9</x>
-          <y>50</y>
+          <y>70</y>
           <width>174</width>
           <height>16</height>
          </rect>
@@ -177,7 +177,7 @@
         <property name="geometry">
          <rect>
           <x>210</x>
-          <y>40</y>
+          <y>60</y>
           <width>510</width>
           <height>31</height>
          </rect>
@@ -413,6 +413,27 @@
          <string>Parking Needed:</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_37">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>381</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Reservation Details</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_2">
        <widget class="QPushButton" name="nextPage_2">
@@ -457,7 +478,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>60</y>
+          <y>70</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -476,7 +497,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>90</y>
+          <y>100</y>
           <width>100</width>
           <height>16</height>
          </rect>
@@ -495,7 +516,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>120</y>
+          <y>130</y>
           <width>151</width>
           <height>16</height>
          </rect>
@@ -514,7 +535,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>150</y>
+          <y>160</y>
           <width>151</width>
           <height>16</height>
          </rect>
@@ -533,7 +554,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>190</y>
+          <y>200</y>
           <width>231</width>
           <height>16</height>
          </rect>
@@ -552,7 +573,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>60</y>
+          <y>70</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -571,7 +592,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>90</y>
+          <y>100</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -590,7 +611,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>120</y>
+          <y>130</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -609,7 +630,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>150</y>
+          <y>160</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -628,7 +649,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>190</y>
+          <y>200</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -668,7 +689,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>230</y>
+          <y>240</y>
           <width>131</width>
           <height>31</height>
          </rect>
@@ -689,7 +710,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>270</y>
+          <y>290</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -708,7 +729,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>270</y>
+          <y>290</y>
           <width>85</width>
           <height>20</height>
          </rect>
@@ -727,7 +748,7 @@
         <property name="geometry">
          <rect>
           <x>370</x>
-          <y>270</y>
+          <y>290</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -746,7 +767,7 @@
         <property name="geometry">
          <rect>
           <x>200</x>
-          <y>300</y>
+          <y>320</y>
           <width>101</width>
           <height>20</height>
          </rect>
@@ -765,7 +786,7 @@
         <property name="geometry">
          <rect>
           <x>370</x>
-          <y>300</y>
+          <y>320</y>
           <width>201</width>
           <height>20</height>
          </rect>
@@ -784,7 +805,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>340</y>
+          <y>360</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -803,7 +824,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>370</y>
+          <y>390</y>
           <width>351</width>
           <height>31</height>
          </rect>
@@ -813,7 +834,7 @@
         <property name="geometry">
          <rect>
           <x>390</x>
-          <y>340</y>
+          <y>360</y>
           <width>201</width>
           <height>16</height>
          </rect>
@@ -832,7 +853,7 @@
         <property name="geometry">
          <rect>
           <x>390</x>
-          <y>370</y>
+          <y>390</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -873,6 +894,122 @@
         </property>
         <property name="text">
          <string>Last Page</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_38">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>431</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Reservation Confirmation</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_39">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Reservation Details:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>First Night:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Length of Stay:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Room Size:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_43">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Room </string>
         </property>
        </widget>
       </widget>
