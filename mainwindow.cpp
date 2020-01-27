@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <sstream>
+#include <iomanip>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -42,21 +44,27 @@ void MainWindow::on_nameInput_textChanged()
 
 void MainWindow::on_numChild_valueChanged(int arg1)
 {
-    Record.setNumNights(arg1);
+    Record.setNumChildren(arg1);
 }
 
 void MainWindow::on_roomView_currentIndexChanged(int index)
 {
     Record.setRoomView(index);
     double estCost = Record.CalculateCost();
-    ui->totCost->setText(QString::number(estCost));
+    stringstream cost;
+    cost << fixed << setprecision(2) << estCost;
+    string c = cost.str();
+    ui->totCost->setText("$" + QString::fromStdString(c));
 }
 
 void MainWindow::on_roomSize_currentIndexChanged(int index)
 {
     Record.setRoomSize(index);
     double estCost = Record.CalculateCost();
-    ui->totCost->setText(QString::number(estCost));
+    stringstream cost;
+    cost << fixed << setprecision(2) << estCost;
+    string c = cost.str();
+    ui->totCost->setText("$" + QString::fromStdString(c));
 }
 
 void MainWindow::on_resDate_userDateChanged(const QDate &date)
@@ -71,9 +79,12 @@ void MainWindow::on_numAdults_valueChanged(int arg1)
 
 void MainWindow::on_lenStay_valueChanged(int arg1)
 {
-    Record.setNumChildren(arg1);
+    Record.setNumNights(arg1);
     double estCost = Record.CalculateCost();
-    ui->totCost->setText(QString::number(estCost));
+    stringstream cost;
+    cost << fixed << setprecision(2) << estCost;
+    string c = cost.str();
+    ui->totCost->setText("$" + QString::fromStdString(c));
 }
 
 void MainWindow::on_parking_clicked(bool checked)
