@@ -15,6 +15,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::displayCost(double estCost)
+{
+    stringstream cost;
+    cost << fixed << setprecision(2) << estCost;
+    string c = cost.str();
+    ui->totCost->setText("$" + QString::fromStdString(c));
+}
 
 void MainWindow::on_nextPage_clicked()
 {
@@ -51,20 +58,14 @@ void MainWindow::on_roomView_currentIndexChanged(int index)
 {
     Record.setRoomView(index);
     double estCost = Record.CalculateCost();
-    stringstream cost;
-    cost << fixed << setprecision(2) << estCost;
-    string c = cost.str();
-    ui->totCost->setText("$" + QString::fromStdString(c));
+    displayCost(estCost);
 }
 
 void MainWindow::on_roomSize_currentIndexChanged(int index)
 {
     Record.setRoomSize(index);
     double estCost = Record.CalculateCost();
-    stringstream cost;
-    cost << fixed << setprecision(2) << estCost;
-    string c = cost.str();
-    ui->totCost->setText("$" + QString::fromStdString(c));
+    displayCost(estCost);
 }
 
 void MainWindow::on_resDate_userDateChanged(const QDate &date)
@@ -81,10 +82,7 @@ void MainWindow::on_lenStay_valueChanged(int arg1)
 {
     Record.setNumNights(arg1);
     double estCost = Record.CalculateCost();
-    stringstream cost;
-    cost << fixed << setprecision(2) << estCost;
-    string c = cost.str();
-    ui->totCost->setText("$" + QString::fromStdString(c));
+    displayCost(estCost);
 }
 
 void MainWindow::on_parking_clicked(bool checked)

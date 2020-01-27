@@ -44,5 +44,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     ReservationRecord Record;
+
+    void displayCost(double estCost);
 };
 #endif // MAINWINDOW_H
