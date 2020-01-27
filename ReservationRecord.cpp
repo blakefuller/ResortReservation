@@ -15,35 +15,32 @@ const double RESORT_FEE = 15;
 
 ReservationRecord::ReservationRecord()
 {
-
+    numNights = 1;
+    numAdults = 1;
+    numChildren = 0;
+    parkingNeeded = false;
 }
 
-// get room Size/vehicle park needed and multiply by night to stay
+// get room size and type needed and multiply by night to stay
 double ReservationRecord :: CalculateCost()
 {
     double totalCost = 0;
     int multipleNights = getNumNights();
 
-    if (getParkingNeeded())
-    {
-        totalCost += multipleNights * PARK_FEE;
-    }
+    int size = getRoomSize();
+    int view = getRoomView();
 
-    switch(getRoomSize())
-    {
-        case 1:
-            totalCost += multipleNights * STANDARD_Q;
-            break;
-        case 2:
-            totalCost += multipleNights * ATRIUM_Q;
-            break;
-        case 3:
-            totalCost += multipleNights * STANDARD_K;
-            break;
-        case 4:
-            totalCost += multipleNights * ATRIUM_K;
-            break;
-    }
+    if(size == 1 && view == 1)
+        totalCost += multipleNights * STANDARD_K;
+    else if(size == 1 && view == 2)
+        totalCost += multipleNights * ATRIUM_K;
+    else if (size == 2 && view == 1)
+        totalCost += multipleNights * STANDARD_Q;
+    else if (size == 2 && view == 2)
+        totalCost += multipleNights * ATRIUM_Q;
+    else
+        totalCost = 0;
+
     return totalCost;
 }
 

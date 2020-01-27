@@ -47,12 +47,16 @@ void MainWindow::on_numChild_valueChanged(int arg1)
 
 void MainWindow::on_roomView_currentIndexChanged(int index)
 {
-    Record.setRoomSize(index);
+    Record.setRoomView(index);
+    double estCost = Record.CalculateCost();
+    ui->totCost->setText(QString::number(estCost));
 }
 
 void MainWindow::on_roomSize_currentIndexChanged(int index)
 {
     Record.setRoomSize(index);
+    double estCost = Record.CalculateCost();
+    ui->totCost->setText(QString::number(estCost));
 }
 
 void MainWindow::on_resDate_userDateChanged(const QDate &date)
@@ -68,6 +72,8 @@ void MainWindow::on_numAdults_valueChanged(int arg1)
 void MainWindow::on_lenStay_valueChanged(int arg1)
 {
     Record.setNumChildren(arg1);
+    double estCost = Record.CalculateCost();
+    ui->totCost->setText(QString::number(estCost));
 }
 
 void MainWindow::on_parking_clicked(bool checked)
