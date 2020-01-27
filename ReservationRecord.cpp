@@ -4,6 +4,15 @@
 
 using namespace std;
 
+// prices for rooms
+const double STANDARD_Q = 284;
+const double STANDARD_K = 290;
+const double ATRIUM_Q = 325;
+const double ATRIUM_K = 350;
+
+const double PARK_FEE = 12.75;
+const double RESORT_FEE = 15;
+
 ReservationRecord::ReservationRecord()
 {
 
@@ -17,22 +26,22 @@ double ReservationRecord :: CalculateCost()
 
     if (getParkingNeeded())
     {
-        totalCost += multipleNights * 12.75;
+        totalCost += multipleNights * PARK_FEE;
     }
 
     switch(getRoomSize())
     {
         case 1:
-            totalCost += multipleNights * 284;
+            totalCost += multipleNights * STANDARD_Q;
             break;
         case 2:
-            totalCost += multipleNights * 325;
+            totalCost += multipleNights * ATRIUM_Q;
             break;
         case 3:
-            totalCost += multipleNights * 290;
+            totalCost += multipleNights * STANDARD_K;
             break;
         case 4:
-            totalCost += multipleNights * 350;
+            totalCost += multipleNights * ATRIUM_K;
             break;
     }
     return totalCost;
@@ -112,4 +121,34 @@ void ReservationRecord :: setNumNights(int num)
 void ReservationRecord :: setParkingNeeded(bool needed)
 {
     parkingNeeded = needed;
+}
+
+void ReservationRecord :: setStartDate(QDate date)
+{
+    startDate = date;
+}
+
+QDate ReservationRecord :: getStartDate()
+{
+    return startDate;
+}
+
+void ReservationRecord :: setNumAdults(int adults)
+{
+    numAdults = adults;
+}
+
+void ReservationRecord :: setNumChildren(int children)
+{
+    numChildren = children;
+}
+
+int ReservationRecord :: getNumAdults()
+{
+    return numAdults;
+}
+
+int ReservationRecord :: getNumChildren()
+{
+    return numChildren;
 }

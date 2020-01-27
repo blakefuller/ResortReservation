@@ -33,6 +33,14 @@ private slots:
 
     void on_roomSize_currentIndexChanged(int index);
 
+    void on_resDate_userDateChanged(const QDate &date);
+
+    void on_numAdults_valueChanged(int arg1);
+
+    void on_lenStay_valueChanged(int arg1);
+
+    void on_parking_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
     ReservationRecord Record;

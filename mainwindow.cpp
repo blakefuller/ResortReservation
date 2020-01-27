@@ -54,3 +54,26 @@ void MainWindow::on_roomSize_currentIndexChanged(int index)
 {
     Record.setRoomSize(index);
 }
+
+void MainWindow::on_resDate_userDateChanged(const QDate &date)
+{
+    Record.setStartDate(date);
+}
+
+void MainWindow::on_numAdults_valueChanged(int arg1)
+{
+    Record.setNumAdults(arg1);
+}
+
+void MainWindow::on_lenStay_valueChanged(int arg1)
+{
+    Record.setNumChildren(arg1);
+}
+
+void MainWindow::on_parking_clicked(bool checked)
+{
+    if (checked)
+        Record.setParkingNeeded(true);
+    else
+        Record.setParkingNeeded(false);
+}
