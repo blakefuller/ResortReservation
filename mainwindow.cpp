@@ -66,6 +66,26 @@ void MainWindow::on_roomSize_currentIndexChanged(int index)
     Record.setRoomSize(index);
     double estCost = Record.CalculateCost();
     displayCost(estCost);
+
+    // reset guest values
+    ui->numChild->setValue(0);
+    ui->numAdults->setValue(1);
+
+    // set maximum number of guests based on room size
+    int adultMax = 1;
+    int childMax = 0;
+    if (index == 1)
+    {
+        adultMax = 3;
+        childMax = 2;
+    }
+    else if (index == 2)
+    {
+        adultMax = 4;
+        childMax = 3;
+    }
+    ui->numAdults->setMaximum(adultMax);
+    ui->numChild->setMaximum(childMax);
 }
 
 void MainWindow::on_resDate_userDateChanged(const QDate &date)
@@ -75,6 +95,14 @@ void MainWindow::on_resDate_userDateChanged(const QDate &date)
 
 void MainWindow::on_numAdults_valueChanged(int arg1)
 {
+    int roomSize = Record.getRoomSize();
+    int maxChildren = 0;
+    if (roomSize == 1)
+        maxChildren = 3 - arg1;
+    else if (roomSize == 2)
+        maxChildren = 4 - arg1;
+    ui->numChild->setMaximum(maxChildren);
+
     Record.setNumAdults(arg1);
 }
 
