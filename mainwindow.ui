@@ -556,7 +556,7 @@ background-color: rgb(154, 154, 154);</string>
          </rect>
         </property>
         <property name="autoFillBackground">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
         <property name="text">
          <string/>

@@ -78,9 +78,43 @@ void MainWindow::on_nextPage_clicked()
 
 void MainWindow::on_nextPage_2_clicked()
 {
+    // build message box
     QMessageBox msgBox;
     msgBox.setText("Payment successfully processed");
     msgBox.exec();
+
+    // page 3 start date
+    QDate startDate = Record.getStartDate();
+    ui->nightLabel->setText(startDate.toString("MM/dd/yyyy"));
+
+    // page 3 length of stay
+    int numNights = Record.getNumNights();
+    ui->stayNum->setText(QString::number(numNights));
+
+    // page 3 size and view of room
+    int roomSize = Record.getRoomSize();
+    int roomView = Record.getRoomView();
+    if(roomSize == 1 && roomView == 1)
+    {
+        ui->sizeOfRoom->setText("1-King");
+        ui->typeOfRoom->setText("Standard");
+    }
+    else if(roomSize == 1 && roomView == 2)
+    {
+        ui->sizeOfRoom->setText("1-King");
+        ui->typeOfRoom->setText("Atrium");
+    }
+    else if (roomSize == 2 && roomView == 1)
+    {
+        ui->sizeOfRoom->setText("2-Queen");
+        ui->typeOfRoom->setText("Standard");
+    }
+    else if (roomSize == 2 && roomView == 2)
+    {
+        ui->sizeOfRoom->setText("2-Queen");
+        ui->typeOfRoom->setText("Atrium");
+    }
+
     ui->stackedWidget->setCurrentIndex(2);
 }
 
