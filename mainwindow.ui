@@ -17,6 +17,13 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(193, 193, 193);</string>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -188,6 +195,22 @@
           <pointsize>10</pointsize>
          </font>
         </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Sans Typewriter'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#c7c8c7;&quot;&gt;Your name here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
        </widget>
        <widget class="QComboBox" name="roomSize">
         <property name="geometry">
@@ -203,6 +226,9 @@
           <family>Lucida Console</family>
           <pointsize>10</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">selection-background-color: rgb(80, 80, 80);</string>
         </property>
         <item>
          <property name="text">
@@ -371,7 +397,7 @@
        <widget class="QLabel" name="totCost">
         <property name="geometry">
          <rect>
-          <x>330</x>
+          <x>310</x>
           <y>390</y>
           <width>121</width>
           <height>21</height>
@@ -383,15 +409,24 @@
           <pointsize>16</pointsize>
          </font>
         </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>$0.00</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
         </property>
        </widget>
        <widget class="QPushButton" name="nextPage">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>470</y>
+          <x>310</x>
+          <y>460</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -429,9 +464,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>20</y>
-          <width>381</width>
-          <height>31</height>
+          <y>10</y>
+          <width>441</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -444,6 +479,34 @@
         </property>
         <property name="text">
          <string>Reservation Details</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>200</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Desktop/5bf407565971e.image.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
       </widget>
