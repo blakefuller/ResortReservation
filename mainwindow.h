@@ -43,6 +43,14 @@ private slots:
 
     void on_closeButton_clicked();
 
+    void on_visaButton_clicked();
+
+    void on_masterButton_clicked();
+
+    void on_discoverButton_clicked();
+
+    void on_radioButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     ReservationRecord Record;
