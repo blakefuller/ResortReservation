@@ -20,6 +20,7 @@ class ReservationRecord
         int getNumChildren();
         QDate getStartDate();
         bool getParkingNeeded();
+        double getFinalCost();
 
         void setCustomerName(string name);
         void setRoomSize(int roomSize);
@@ -29,6 +30,7 @@ class ReservationRecord
         void setNumChildren(int children);
         void setStartDate(QDate date);
         void setParkingNeeded(bool needed);
+        void setFinalCost(double cost);
 
     private:
         string customerName;
@@ -39,6 +41,7 @@ class ReservationRecord
         int numChildren;
         QDate startDate;
         bool parkingNeeded;
+        double finalCost;
 };
 
 #endif // RESERVATIONRECORD_H

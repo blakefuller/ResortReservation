@@ -93,6 +93,11 @@ bool ReservationRecord ::getParkingNeeded()
     return parkingNeeded;
 }
 
+void ReservationRecord :: setFinalCost(double cost)
+{
+    finalCost = cost;
+}
+
 // // sets the customer name with passed value
 void ReservationRecord :: setCustomerName(string name)
 {
@@ -148,4 +153,9 @@ int ReservationRecord :: getNumAdults()
 int ReservationRecord :: getNumChildren()
 {
     return numChildren;
+}
+
+double ReservationRecord :: getFinalCost()
+{
+    return finalCost;
 }

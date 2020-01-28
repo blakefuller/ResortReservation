@@ -73,6 +73,7 @@ void MainWindow::on_nextPage_clicked()
     // display resort fee
     double total = Record.CalculateCost() + tax + parking + resort;
     string tc = formatPrice(total);
+    Record.setFinalCost(total);
     ui->totDis->setText("$" + QString::fromStdString(tc));
 }
 
@@ -82,6 +83,10 @@ void MainWindow::on_nextPage_2_clicked()
     QMessageBox msgBox;
     msgBox.setText("Payment successfully processed");
     msgBox.exec();
+
+    // page 3 name
+    string name = Record.getCustomerName();
+    ui->nameFile->setText(QString::fromStdString(name));
 
     // page 3 start date
     QDate startDate = Record.getStartDate();
@@ -121,6 +126,24 @@ void MainWindow::on_nextPage_2_clicked()
         ui->needPark->setText("Yes");
     else
         ui->needPark->setText("No");
+
+    // page 3 number of adults
+    int numAdults = Record.getNumAdults();
+    ui->adultNum->setText(QString::number(numAdults));
+
+    // page 3 number of children
+    int numChildren = Record.getNumChildren();
+    ui->childrenNum->setText(QString::number(numChildren));
+
+    // page 3 card info
+    string fullCard = ui->lineEdit->text().toUtf8().constData();
+    string lastFour = fullCard.substr(fullCard.length() - 4);
+    string displayCard = "****-" + lastFour;
+    ui->paidWith->setText(QString::fromStdString(displayCard));
+
+//    // page 3 total cost
+//    string final = formatPrice(Record.getFinalCost());
+//    ui->
 
     ui->stackedWidget->setCurrentIndex(2);
 }
