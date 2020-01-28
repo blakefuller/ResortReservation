@@ -141,9 +141,9 @@ void MainWindow::on_nextPage_2_clicked()
     string displayCard = "****-" + lastFour;
     ui->paidWith->setText(QString::fromStdString(displayCard));
 
-//    // page 3 total cost
-//    string final = formatPrice(Record.getFinalCost());
-//    ui->
+    // page 3 total cost
+    string final = formatPrice(Record.getFinalCost());
+    ui->costThot->setText(QString::fromStdString(final));
 
     ui->stackedWidget->setCurrentIndex(2);
 }
@@ -151,11 +151,6 @@ void MainWindow::on_nextPage_2_clicked()
 void MainWindow::on_lastPage_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
-}
-
-void MainWindow::on_lastPage_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
 }
 
 void MainWindow::on_nameInput_textChanged()

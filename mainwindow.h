@@ -23,8 +23,6 @@ private slots:
 
     void on_lastPage_clicked();
 
-    void on_lastPage_2_clicked();
-
     void on_nameInput_textChanged();
 
     void on_numChild_valueChanged(int arg1);
