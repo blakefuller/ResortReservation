@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iomanip>
 #include <QLineEdit>
+#include <QMessageBox>
 
 extern const double PARK_FEE;
 extern const double RESORT_FEE;
@@ -77,6 +78,9 @@ void MainWindow::on_nextPage_clicked()
 
 void MainWindow::on_nextPage_2_clicked()
 {
+    QMessageBox msgBox;
+    msgBox.setText("Payment successfully processed");
+    msgBox.exec();
     ui->stackedWidget->setCurrentIndex(2);
 }
 
