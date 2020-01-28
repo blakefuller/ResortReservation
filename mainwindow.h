@@ -41,6 +41,8 @@ private slots:
 
     void on_parking_clicked(bool checked);
 
+    void on_closeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     ReservationRecord Record;

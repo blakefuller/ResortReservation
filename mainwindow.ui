@@ -25,7 +25,7 @@
 background-color: rgb(193, 193, 193);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page1">
        <widget class="QLabel" name="label">
@@ -501,7 +501,7 @@ p, li { white-space: pre-wrap; }
          <bool>false</bool>
         </property>
         <property name="autoFillBackground">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
         <property name="text">
          <string/>

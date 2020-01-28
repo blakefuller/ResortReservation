@@ -166,3 +166,8 @@ void MainWindow::on_parking_clicked(bool checked)
     else
         Record.setParkingNeeded(false);
 }
+
+void MainWindow::on_closeButton_clicked()
+{
+    QApplication::quit();
+}
