@@ -10,8 +10,8 @@ const double STANDARD_K = 290;
 const double ATRIUM_Q = 325;
 const double ATRIUM_K = 350;
 
-const double PARK_FEE = 12.75;
-const double RESORT_FEE = 15;
+extern const double PARK_FEE = 12.75;
+extern const double RESORT_FEE = 15;
 
 ReservationRecord::ReservationRecord()
 {

@@ -3,6 +3,9 @@
 #include <sstream>
 #include <iomanip>
 
+extern const double PARK_FEE;
+extern const double RESORT_FEE;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -23,9 +26,52 @@ void MainWindow::displayCost(double estCost)
     ui->totCost->setText("$" + QString::fromStdString(c));
 }
 
+string MainWindow::formatPrice(double price)
+{
+    stringstream ss;
+    ss << fixed << setprecision(2) << price;
+    return ss.str();
+}
+
 void MainWindow::on_nextPage_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+
+    // display room type
+    string roomText;
+    int roomSize = Record.getRoomSize();
+    int roomView = Record.getRoomView();
+    if(roomSize == 1 && roomView == 1)
+        roomText = "1-King Standard room";
+    else if(roomSize == 1 && roomView == 2)
+        roomText = "1-King Atrium room";
+    else if (roomSize == 2 && roomView == 1)
+        roomText = "2-Queen Standard room";
+    else if (roomSize == 2 && roomView == 2)
+        roomText = "2-Queen Atrium room";
+    ui->roomDis->setText(QString::fromStdString(roomText));
+
+    // display tax
+    double tax = Record.CalculateCost() * 0.15;
+    string t = formatPrice(tax);
+    ui->taxDis->setText("$" + QString::fromStdString(t));
+
+    // display parking fee
+    double parking = 0;
+    if(Record.getParkingNeeded())
+        parking = PARK_FEE * Record.getNumNights();
+    string p = formatPrice(parking);
+    ui->parkDis->setText("$" + QString::fromStdString(p));
+
+    // display resort fee
+    double resort = RESORT_FEE * Record.getNumNights();
+    string r = formatPrice(resort);
+    ui->resDis->setText("$" + QString::fromStdString(r));
+
+    // display resort fee
+    double total = Record.CalculateCost() + tax + parking + resort;
+    string tc = formatPrice(total);
+    ui->totDis->setText("$" + QString::fromStdString(tc));
 }
 
 void MainWindow::on_nextPage_2_clicked()

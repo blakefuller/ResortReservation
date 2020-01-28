@@ -46,5 +46,6 @@ private:
     ReservationRecord Record;
 
     void displayCost(double estCost);
+    string formatPrice(double price);
 };
 #endif // MAINWINDOW_H
