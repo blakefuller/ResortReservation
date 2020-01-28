@@ -115,6 +115,13 @@ void MainWindow::on_nextPage_2_clicked()
         ui->typeOfRoom->setText("Atrium");
     }
 
+    // page 3 parking info
+    bool parking = Record.getParkingNeeded();
+    if (parking)
+        ui->needPark->setText("Yes");
+    else
+        ui->needPark->setText("No");
+
     ui->stackedWidget->setCurrentIndex(2);
 }
 
