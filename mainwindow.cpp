@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <sstream>
 #include <iomanip>
+#include <QLineEdit>
 
 extern const double PARK_FEE;
 extern const double RESORT_FEE;
@@ -170,4 +171,28 @@ void MainWindow::on_parking_clicked(bool checked)
 void MainWindow::on_closeButton_clicked()
 {
     QApplication::quit();
+}
+
+void MainWindow::on_visaButton_clicked()
+{
+    ui->lineEdit->setText("");
+    ui->lineEdit->setInputMask("4999-9999-9999-9999");
+}
+
+void MainWindow::on_masterButton_clicked()
+{
+    ui->lineEdit->setText("");
+    ui->lineEdit->setInputMask("5999-9999-9999-9999");
+}
+
+void MainWindow::on_discoverButton_clicked()
+{
+    ui->lineEdit->setText("");
+    ui->lineEdit->setInputMask("6999-9999-9999-9999");
+}
+
+void MainWindow::on_radioButton_clicked()
+{
+    ui->lineEdit->setText("");
+    ui->lineEdit->setInputMask("3999-999999-99999");
 }
