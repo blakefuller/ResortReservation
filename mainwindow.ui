@@ -25,7 +25,7 @@
 background-color: rgb(100, 100, 100);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page1">
        <widget class="QLabel" name="label">
@@ -1097,7 +1097,7 @@ background-color: rgb(154, 154, 154);</string>
          </font>
         </property>
         <property name="text">
-         <string>Reservation Details:</string>
+         <string>Reservation Details</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1182,14 +1182,20 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="nightLabel">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>180</x>
           <y>210</y>
-          <width>101</width>
-          <height>16</height>
+          <width>171</width>
+          <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>First Night Label</string>
+         <string>nightLabel</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1198,14 +1204,20 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="stayNum">
         <property name="geometry">
          <rect>
-          <x>260</x>
+          <x>210</x>
           <y>250</y>
-          <width>81</width>
-          <height>16</height>
+          <width>141</width>
+          <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Length of Stay</string>
+         <string>stayNum</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1214,14 +1226,20 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="sizeOfRoom">
         <property name="geometry">
          <rect>
-          <x>270</x>
+          <x>220</x>
           <y>290</y>
-          <width>71</width>
-          <height>16</height>
+          <width>131</width>
+          <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Room Size</string>
+         <string>sizeOfRoom</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1230,14 +1248,20 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="typeOfRoom">
         <property name="geometry">
          <rect>
-          <x>270</x>
+          <x>220</x>
           <y>330</y>
-          <width>71</width>
-          <height>16</height>
+          <width>131</width>
+          <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Room Type</string>
+         <string>typeOfRoom</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1346,11 +1370,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="adultNum">
         <property name="geometry">
          <rect>
-          <x>610</x>
+          <x>590</x>
           <y>210</y>
-          <width>81</width>
-          <height>16</height>
+          <width>111</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>adultNum</string>
@@ -1362,11 +1392,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="needPark">
         <property name="geometry">
          <rect>
-          <x>590</x>
+          <x>600</x>
           <y>170</y>
           <width>101</width>
           <height>16</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>needPark</string>
@@ -1378,11 +1414,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="costThot">
         <property name="geometry">
          <rect>
-          <x>620</x>
+          <x>590</x>
           <y>330</y>
-          <width>71</width>
-          <height>16</height>
+          <width>111</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>costTot</string>
@@ -1394,11 +1436,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="paidWith">
         <property name="geometry">
          <rect>
-          <x>620</x>
+          <x>590</x>
           <y>290</y>
-          <width>71</width>
-          <height>16</height>
+          <width>111</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>payWith</string>
@@ -1448,11 +1496,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="childrenNum">
         <property name="geometry">
          <rect>
-          <x>610</x>
+          <x>590</x>
           <y>250</y>
-          <width>81</width>
-          <height>16</height>
+          <width>111</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>childrenNum</string>
@@ -1464,11 +1518,17 @@ background-color: rgb(154, 154, 154);</string>
        <widget class="QLabel" name="nameFile">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>239</x>
           <y>170</y>
-          <width>101</width>
-          <height>16</height>
+          <width>111</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Console</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>nameFile</string>
@@ -1488,7 +1548,7 @@ background-color: rgb(154, 154, 154);</string>
      <x>0</x>
      <y>0</y>
      <width>768</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
